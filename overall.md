@@ -24,16 +24,24 @@
   <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/speed_improved.JPG"> <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/speed_improved2.JPG">
   </div>
   
-### Filters
+### Filtering Live Video
 
   #### Linked Libraries
     
-    - openCV 4.0.x 
-  
+    - openCV 4.0.x   
     - openGLES 2.0
   
+  #### Implemented Filters
+   
+    - Cartoon Filter : 인물 또는 배경의 만화 효과    
+    - Studio Effect : 인물과 배경이미지 합성 효과 
+    - Beauty Filter : 화사한 인물 효과
+    
+    
   <br>
   <div align="left">
   <img width="70%" src="https://github.com/iSPD/SFnet/blob/main/images/frontCamera.png"/>
   </div>
   </br>
+  
+  
