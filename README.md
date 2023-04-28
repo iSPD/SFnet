@@ -28,11 +28,6 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 <img width="28%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthObje.png"/>    <img width="46%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthPersons.jpg"/>
 </div>
 
-- 개발환경
-    ```
-    - OpenCV 4.0.x
-    ```
-
 - SFNet에서는 양안 카메라 없이 아래와 같은 알고리즘을 이용하여 Depth Map 추출
 
 - 특허등록 기술 : **심도 예측을 이용한 단안카메라 用 아웃포커스 장치 및 방법** 2018.11.15 (10-2018-0140751)
@@ -60,11 +55,6 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 <div align="center">
 <img width="55%" src="https://github.com/iSPD/SFnet/blob/main/images/mediapipe.gif"/>
 </div>
-
-- 개발환경
-    ```
-    - C++
-    ```
 
 - 구글에서 제공하는 AI Framework인 MediaPipe에서 Motion Recognition 사용
 
@@ -204,6 +194,6 @@ SFnet<sup>TM</sup> 은 semantic segmentation을 최적으로 수행하기 위해
 
 - **S/C Depth Extraction(단안 카메라 심도 추출)** 기술에 의해 Depth를 추출하여 Depth Mask 생성
 
-- Android Camera Preview를 OpenCV에서 분석된 Depth 정보로 이용하여, OpenGLES 2.0의 SurfaceTexture를 통해 Shader에 각종 Filter를 적용 후 화면에 그려줌.
+- Android Camera Preview를 OpenCV에서 분석한 Depth 정보로 이용하여, OpenGLES 2.0의 SurfaceTexture를 통해 Shader에 각종 Filter를 적용 후 화면에 그려줌.
 
-- Shader에 Depth Mask를 이용하여 Filter **Effect Using OpenGL ES2.0 Shader**에 기술 된 필터 및 효과 적용
+- Shader에 Depth Mask를 이용하여 **Filter Effect Using OpenGL ES2.0 Shader**에 기술 된 필터 및 효과 적용
