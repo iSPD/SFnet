@@ -155,10 +155,22 @@ SFnet<sup>TM</sup> 은 semantic segmentation을 최적으로 수행하기 위해
 ## Object Detection
 
 <div align="center">
-<img width="30%" src="https://github.com/iSPD/SFnet/blob/main/images/obj.gif"/>
+<img width="30%" src="https://github.com/iSPD/SFnet/blob/main/images/obj.gif"/>    <img width="42%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthObje2.png"/>
 </div>
 
-무슨 말을 넣을까요?
+- SFNet에서는 아래와 같은 알고리즘을 이용하여 피사체 자동추적
+
+- 특허등록 기술 : **Object Detection의 피사체 자동추적 인식을 통한 심도효과 및 배경처리 방법** 2018.11.15 (10-2018-0140752)
+
+- Object Detection으로 다수의 피사체 인식
+
+- 각 파사체를 표기하는 외곽 박스의 면적 분석
+
+- 각 피사체와 화면 중심 간의 거리 분석
+
+- 각 피사체의 심도(원근) 분석
+
+- Size, 중심과의 Distance, depth의 정보를 이용하여 최종 피사체 선택
 
 ---
 
