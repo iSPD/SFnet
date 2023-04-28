@@ -19,7 +19,7 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
 ### S/C Depth Extraction(단안 카메라 심도 추출)
 
-  <img width="35%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthObj.png"/>    <img width="25%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthPerson.png"/>
+<img width="35%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthObj.png"/><img width="35%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthPerson.jpg"/>
     
 ### 사용모델
   - [ssd_mobilenet_v2_quantized_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md#:~:text=ssd_mobilenet_v2_quantized_coco)
