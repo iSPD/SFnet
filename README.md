@@ -17,28 +17,46 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
 ---
 
-### Object Detection
+### S/C Depth Extraction(단안 카메라 심도 추출)
 
-  <br>  
-  <div align="left">
-  <img width="35%" src="https://github.com/iSPD/SFnet/blob/main/images/obj.gif"/>
-  </div>
-  </br>
-  
-### 개발 언어
-  - Java
-
-  - C, C++
+  <img width="35%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthObj.png"/>    <img width="25%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthPerson.png"/>
     
-### 사용 라이브러리
-  - OpenCV 4.0.x android sdk
-
-  - OpenGLES 2.0(Shader)
-  
 ### 사용모델
   - [ssd_mobilenet_v2_quantized_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md#:~:text=ssd_mobilenet_v2_quantized_coco)
 
-### 기술 내용
+  <br>  
+  <div align="left">
+  <img width="70%" src="https://github.com/iSPD/SFnet/blob/main/images/obj_detection.JPG"/>
+  </div>
+  </br>
+  
+### Advanced Semantic-Segmentation
+
+  * 정확도 향상
+  
+  <div align="left">
+  <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/re-segmentation_1.JPG">  <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/re-segmentation_2.JPG">
+  </div>
+  
+  * 속도 향상
+  
+  <div align="left">
+  <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/speed_improved.JPG"> <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/speed_improved2.JPG">
+  </div>
+  
+### SFNet 기술 개발
+
+  ### 개발 언어
+    - Java
+
+    - C, C++
+    
+  ### 사용 라이브러리
+    - OpenCV 4.0.x android sdk
+
+    - OpenGLES 2.0(Shader)
+    
+  ### 기술 내용
 
   <img width="70%" src="https://github.com/iSPD/SFnet/blob/main/images/ObjectDetection.png"/>
 
@@ -98,34 +116,6 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
             "void main()\n" +
             "{\n" +
     ```
-
-  <br>  
-  <div align="left">
-  <img width="70%" src="https://github.com/iSPD/SFnet/blob/main/images/obj_detection.JPG"/>
-  </div>
-  </br>
-  
-### Advanced Semantic-Segmentation
-
-  * 정확도 향상
-  
-  <div align="left">
-  <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/re-segmentation_1.JPG">  <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/re-segmentation_2.JPG">
-  </div>
-  
-  * 속도 향상
-  
-  <div align="left">
-  <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/speed_improved.JPG"> <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/speed_improved2.JPG">
-  </div>
-  
-### Filters
-
-  #### Linked Libraries
-    
-    - openCV 4.0.x 
-  
-    - openGLES 2.0
   
   <br>
   <div align="left">
