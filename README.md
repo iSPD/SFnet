@@ -25,6 +25,8 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
 ## Motion Recognition
 
+<img width="70%" src="https://github.com/iSPD/SFnet/blob/main/images/mediapipe.gif"/>
+
 ---
       
 ## Advanced Semantic Segmentation
@@ -43,7 +45,15 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
 ---
 
-## SFNet 기술 개발
+## Filter Effect Using OpenGL ES2.0 Shader
+
+<br>
+<div align="left">
+<img width="70%" src="https://github.com/iSPD/SFnet/blob/main/images/frontCamera.png"/>
+</div>
+</br>
+
+## SFNet 기술 개발 개요
 
 ### 사용모델
 - [ssd_mobilenet_v2_quantized_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md#:~:text=ssd_mobilenet_v2_quantized_coco)
@@ -65,9 +75,6 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 - OpenGLES 2.0(Shader)
 
 ### 기술 내용
-
-<img width="70%" src="https://github.com/iSPD/SFnet/blob/main/images/ObjectDetection.png"/>
-
 - Android preview callback buffer를 이용하여 Preview Data를 Object Detection Model에서 Inference(Minimum Confidence Rate : 0)하여 모든 객체 위치 검출.
 
 - Preview Data와 Object Detection에서 검출된 객체 위치를 이용하여 Jni(Java대비 속도 이슈 때문에 사용)에서 OpenCV를 이용하여 Target 객체 분석하여 정보 추출.
@@ -124,9 +131,3 @@ public static final String SOURCE_DRAW_FS_BEAUTIFY_FILTER = "" +
         "void main()\n" +
         "{\n" +
 ```
-  
-  <br>
-  <div align="left">
-  <img width="70%" src="https://github.com/iSPD/SFnet/blob/main/images/frontCamera.png"/>
-  </div>
-  </br>
