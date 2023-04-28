@@ -26,13 +26,13 @@ SFnet<sup>TM</sup> 은 semantic segmentation을 최적으로 수행하기 위해
     
   #### 인물 세그멘테이션 정확도 향상 특허기술
   
-  Semantic Segmentation을 이용한 인물 또는 사물 영역 분할 &rarr; 분할된 영역의 Scale-Down을 통한 Marker 생성 &rarr; 분할된 영역의 Scale-Up을 통한 Outer 생성 &rarr; Re-Segmentation을 위한 Marker와 Outer의 배치 &rarr; Marker 와 Outer 사이의 영역을 Re-Segmentation 하여 정확도를 향상하였다.
+  Semantic Segmentation을 이용한 인물 또는 사물 영역 분할 &rarr; 분할된 영역의 Scale-Down을 통한 Marker 생성 &rarr; 분할된 영역의 Scale-Up을 통한 Outer 생성 &rarr; Re-Segmentation을 위한 Marker와 Outer의 배치 &rarr; Marker 와 Outer 사이의 영역을 Re-Segmentation 하여 정확도를 향상.
 
   <div align="center">
   <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/re-segmentation_1.JPG">  <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/re-segmentation_2.JPG">
   </div>
   
-  #### 속도 향상 특허기술
+  #### 속도 개선 특허기술
   
   다중 모델을 혼용하여 인공지능 Semantic Segmentation 모델의 속도, 정확도 개선
 
