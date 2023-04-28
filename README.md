@@ -24,6 +24,11 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
   <img width="35%" src="https://github.com/iSPD/SFnet/blob/main/images/obj.gif"/>
   </div>
   </br>
+  
+### 개발 언어
+  - Java
+
+  - C, C++
     
 ### 사용 라이브러리
   - OpenCV 4.0.x android sdk
@@ -49,9 +54,50 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
   - Android Camera Preview를 OpenCV에서 분석된 정보로 이용하여, OpenGLES 2.0의 SurfaceTexture를 통해 Shader에 각종 Filter를 적용 후 화면에 그려줌.
 
-    - Shader에 Depth Mask를 이용하여 Cartoon Effect, SF Moview Effect, OutFocus, HighLight Effect 효과 적용
+    - Shader에 Depth Mask를 이용하여 아래 필터 및 효과 적용
 
-    - 소스 코드 간략히 추가
+      - Cartoon효과 : 사람만 Cartoon, 배경만 Cartoon
+      
+      - SF효과 : 객체 및 사람의 배경을 다른 사진으로 변경
+
+      - OutFocus효과 : 객체 및 사람의 배경 Blur
+      
+      - HighLight효과 : 객체 및 사람의 배경 어둡게. 아이폰 카메라에 있는 무대조명 효과
+      
+      - Edge필터 : Cartoon효과에 사용
+
+      - LerpBlur필터 : 모든 효과에 Feather를 주어서 자연스럽게 함
+     
+      - Beauty필터 : 사람 얼굴 아름답게 보정
+
+    - 소스 예제(Beauty필터)
+    ```
+    public static final String SOURCE_DRAW_FS_BEAUTIFY_FILTER = "" +
+            "#extension GL_OES_EGL_image_external : require\n" +
+            "precision mediump float;\n" +
+            "uniform samplerExternalOES sTexture;\n" +
+            //"uniform sampler2D sTexture;\n" +
+            "uniform sampler2D sMaskTexture;\n" +
+            "uniform sampler2D sGammaTexture;\n" +
+            "uniform vec2 imageStep;\n" +
+            "uniform float intensity;\n" +
+            "uniform int uUseCartoon;\n" +
+            "varying vec2 vTexCoord;\n" +
+
+            "vec4 black_edge_effect(vec2 coord, vec4 color) {\n" +
+            "      vec4 effect;\n" +
+            "      float bk_rate = 1.0;\n" +
+
+            "      effect.r = texture2D(sGammaTexture, vec2(color.r, 0.0)).r * bk_rate;\n" +
+            "      effect.g = texture2D(sGammaTexture, vec2(color.g, 0.0)).g * bk_rate;\n" +
+            "      effect.b = texture2D(sGammaTexture, vec2(color.b, 0.0)).b * bk_rate;\n" +
+            "      effect.a = color.a;\n" +
+            "      return effect;\n" +
+            "}\n" +
+
+            "void main()\n" +
+            "{\n" +
+    ```
 
   <br>  
   <div align="left">
