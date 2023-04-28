@@ -192,8 +192,8 @@ SFnet<sup>TM</sup> 은 semantic segmentation을 최적으로 수행하기 위해
 
 - Preview Data와 Object Detection 및 Semantic Segmentation에서 검출된 객체 위치 및 사람 영역을 이용하여 Jni(Java대비 속도 이슈 때문에 사용)에서 OpenCV를 이용하여 Target 객체  분석하여 정보 추출.
 
-- **S/C Depth Extraction(단안 카메라 심도 추출)** 기술에 의해 Depth를 추출하여 Depth Mask 생성
+- [**S/C Depth Extraction(단안 카메라 심도 추출)**](https://github.com/iSPD/SFnet#sc-depth-extraction%EB%8B%A8%EC%95%88-%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%8B%AC%EB%8F%84-%EC%B6%94%EC%B6%9C) 기술에 의해 Depth를 추출하여 Depth Mask 생성
 
 - Android Camera Preview를 OpenCV에서 분석한 Depth 정보로 이용하여, OpenGLES 2.0의 SurfaceTexture를 통해 Shader에 각종 Filter를 적용 후 화면에 그려줌.
 
-- Shader에 Depth Mask를 이용하여 **Filter Effect Using OpenGL ES2.0 Shader**에 기술 된 필터 및 효과 적용
+- Shader에 Depth Mask를 이용하여 [**Filter Effect Using OpenGL ES2.0 Shader**](https://github.com/iSPD/SFnet#filter-effect-using-opengl-es20-shader)에 기술 된 필터 및 효과 적용
