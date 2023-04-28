@@ -1,15 +1,4 @@
-### SFCam on Mobile with SFNet<sup>TM</sup>
 
-  - 데모화면 몇 개
-
-### Object Detection
-  
-  <br>  
-  <div align="center">
-  <img width="70%" src="https://github.com/iSPD/SFnet/blob/main/images/obj_detection.JPG"/>
-  </div>
-  </br>
-  
 ### 인물인식 (Advanced Semantic-Segmentation)
 
 SFnet<sup>TM</sup> 은 semantic segmentation을 최적으로 수행하기 위해 DeepLab V3+ 모델에 Quantization, Output Resizing 을 적용한 후 아래 특허기술을 결합하여 고성능 semantic segmentation을 구현하였다.
