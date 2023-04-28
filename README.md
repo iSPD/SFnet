@@ -1,7 +1,10 @@
 # SFnet<sup>TM</sup>
 
 S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위한 고속, 정밀 인공지능 Semantic Segmentation 모델(알고리즘)
-<img width="90%" src="https://github.com/iSPD/SFnet/blob/main/images/SFCamIntro.png"/>
+
+<div align="center">
+<img width="80%" src="https://github.com/iSPD/SFnet/blob/main/images/SFCamIntro.png"/>
+</div>
 
 ---
 
@@ -13,13 +16,17 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
 ## SFCam on Mobile with SFNet<sup>TM</sup>
 
-<img width="40%" src="https://github.com/iSPD/SFnet/blob/main/images/backCamera.gif"/>    <img width="40%" src="https://github.com/iSPD/SFnet/blob/main/images/frontCamera.gif"/>
+<div align="center">
+<img width="30%" src="https://github.com/iSPD/SFnet/blob/main/images/backCamera.gif"/>    <img width="30%" src="https://github.com/iSPD/SFnet/blob/main/images/frontCamera.gif"/>
+</div>
 
 ---
 
 ## S/C Depth Extraction(단안 카메라 심도 추출)
 
-<img width="35%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthObje.png"/>    <img width="58%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthPersons.jpg"/>
+<div align="center">
+<img width="28%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthObje.png"/>    <img width="46%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthPersons.jpg"/>
+</div>
 
 - 개발환경
     ```
@@ -42,13 +49,17 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
 - 가장 많이 겹친 부분을 피사체로 인식. 심도레벨 : 0(최대로 겹칩) ~ 9(겹치는 부분 없음). 총 10레벨 중 높을 수록 심도가 깊음.
 
+<div align="center">
 <img width="100%" src="https://github.com/iSPD/SFnet/blob/main/images/%EC%8B%AC%EB%8F%84%EC%98%88%EC%A0%9C.png"/> 
+</div>
 
 ---
 
 ## Motion Recognition
 
-<img width="70%" src="https://github.com/iSPD/SFnet/blob/main/images/mediapipe.gif"/>
+<div align="center">
+<img width="55%" src="https://github.com/iSPD/SFnet/blob/main/images/mediapipe.gif"/>
+</div>
 
 - 개발환경
     ```
@@ -153,7 +164,9 @@ SFnet<sup>TM</sup> 은 semantic segmentation을 최적으로 수행하기 위해
     
 ## Object Detection
 
+<div align="center">
 <img width="30%" src="https://github.com/iSPD/SFnet/blob/main/images/obj.gif"/>
+</div>
 
 무슨 말을 넣을까요?
 
