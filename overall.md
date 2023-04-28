@@ -1,5 +1,5 @@
 
-### 인물 영역 인식 (Advanced Semantic-Segmentation)
+### 인물 영역 인식 (with Advanced Semantic-Segmentation)
 
 SFnet<sup>TM</sup> 은 semantic segmentation을 최적으로 수행하기 위해 DeepLab V3+ 모델에 Quantization, Output Resizing 을 적용한 후 아래 특허기술을 결합하여 고성능 semantic segmentation을 구현하였다.
 
