@@ -155,6 +155,10 @@ SFnet<sup>TM</sup> 은 semantic segmentation을 최적으로 수행하기 위해
 
 <img width="30%" src="https://github.com/iSPD/SFnet/blob/main/images/obj.gif"/>
 
+무슨 말을 넣을까요?
+
+---
+
 ## SFNet 기술 개발 개요
 
 ### 사용모델
