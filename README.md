@@ -216,7 +216,7 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
 - Android Camera Preview를 OpenCV에서 분석한 Depth 정보로 이용하여, OpenGLES 2.0의 SurfaceTexture를 통해 Shader에 각종 Filter를 적용 후 화면에 그려줌.
 
-- Shader에 Depth Mask를 이용하여 [**Filter Effect Using OpenGL ES2.0 Shader**](https://github.com/iSPD/SFnet#filter-effect-using-opengl-es20-shader)에 기술 된 필터 및 효과 적용
+- Shader에는 Depth Mask를 이용하여 [**Filter Effect Using OpenGL ES2.0 Shader**](https://github.com/iSPD/SFnet#filter-effect-using-opengl-es20-shader)에 기술 된 필터 및 효과 적용
 
 ---
 ## LICENSE
