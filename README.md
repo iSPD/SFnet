@@ -66,7 +66,7 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
 - 구글에서 제공하는 AI Framework인 MediaPipe에서 Motion Recognition 사용
 
-- <b>SFNet<sup>TM</sup></b>에서는 사람 영역 검출을 위해 사용됨.
+- <b>SFNet<sup>TM</sup></b>에서는 사람 영역 검출을 위해 사용되며, Semantic Segmentation만으로는 손이나 팔 등을 인식하는데 한계가 있어 사용됨.
 
 - MediaPipe에서는 다양한 비전 AI기능을 파이프라인 형태로 손쉽게 사용할 수 있도록 프레임워크를 제공. 인체를 대상으로 하는 Detect(인식)에 대해서 얼굴인식, 포즈, 객체감지, 모션트레킹 등 다양한 형태의 기능과 모델을 제공함. python등 다양한 언어을 지원하며, <b>SFNet<sup>TM</sup></b>에서는 C++코드를 사용함.
 
