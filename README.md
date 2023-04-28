@@ -23,7 +23,7 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
 - 개발환경
     ```
-    - openCV 4.0.x
+    - OpenCV 4.0.x
     ```
 
 - SFNet에서는 양안 카메라 없이 아래와 같은 알고리즘을 이용하여 Depth Map 추출
@@ -63,31 +63,46 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
 ---
       
-### 인물인식 (Advanced Semantic-Segmentation)
+### 인물 영역 인식 (with Advanced Semantic-Segmentation)
 
-<b>SFnet<sup>TM</sup></b> 은 semantic segmentation을 최적으로 수행하기 위해 DeepLab V3+ 모델에 Quantization, Output Resizing 을 적용한 후 아래 특허기술을 결합하여 고성능 semantic segmentation을 구현하였다.
+SFnet<sup>TM</sup> 은 semantic segmentation을 최적으로 수행하기 위해 DeepLab V3+ 모델에 Quantization, Output Resizing 을 적용한 후 아래 특허기술을 결합하여 고성능 semantic segmentation을 구현하였다.
 
-  * 개발환경
-    ```
-    - TensorFlow-Lite   
-    - openCV 4.0.x
-    ```
+  #### 개발환경
+
+  ```
+  - TensorFlow-Lite   
+  - openCV 4.0.x
+  ```
     
-  * 인물 세그멘테이션 정확도 향상 특허기술
+  #### Tensorflow-lite Build on Android
   
-    Semantic Segmentation을 이용한 인물 또는 사물 영역 분할 &rarr; 분할된 영역의 Scale-Down을 통한 Marker 생성 &rarr; 분할된 영역의 Scale-Up을 통한 Outer 생성 &rarr; Re-Segmentation을 위한 Marker와 Outer의 배치 &rarr; Marker 와 Outer 사이의 영역을 Re-Segmentation 하여 정확도를 향상하였다.
+  ``` bash
+  $ cd /home/android-sdk
+  $ sdkmanager "platform-tools" "platforms;android-28"
+  $ Sdkmanager “build-tools;28.0.3”
+  $ bazel build --cxxopt='--std=c++11' -c opt --incompatible_remove_native_http_archive=false --fat_apk_cpu=arm64-v8a,armeabi-v7a //tensorflow/contrib/lite/java:tensorflow-lite
+
+  ```
+    
+  #### Model Optimization
+  
+  See &rarr; https://www.tensorflow.org/lite/performance/post_training_quantization
+    
+  #### 인물 세그멘테이션 정확도 향상 특허기술
+  
+  Semantic Segmentation을 이용한 인물 또는 사물 영역 분할 &rarr; 분할된 영역의 Scale-Down을 통한 Marker 생성 &rarr; 분할된 영역의 Scale-Up을 통한 Outer 생성 &rarr; Re-Segmentation을 위한 Marker와 Outer의 배치 &rarr; Marker 와 Outer 사이의 영역을 Re-Segmentation 하여 정확도를 향상.
 
   <div align="center">
   <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/re-segmentation_1.JPG">  <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/re-segmentation_2.JPG">
   </div>
   
-  * 속도 향상 특허기술
+  #### 속도 개선 특허기술
   
-    다중 모델을 혼용하여 인공지능 Semantic Segmentation 모델의 속도, 정확도 개선
-    
-    - 다중 모델 병합 = 고속/저정확도 모델 + 저속/고정확도 모델
-    
-    - 피사체 움직임 감지 &rarr; 고속/저정확도 모델 사용, 피사체 움직임 미감지 &rarr; 저속/고정확도 모델 사용 
+  다중 모델을 혼용하여 인공지능 Semantic Segmentation 모델의 속도, 정확도 개선
+
+  - 다중 모델 병합 = 고속/저정확도 모델 + 저속/고정확도 모델
+
+  - 피사체 움직임 감지 &rarr; 고속/저정확도 모델 사용, 피사체 움직임 미감지 &rarr; 저속/고정확도 모델 사용 
     
   <div align="center">
   <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/speed_improved.JPG"> <img width="45%" src="https://github.com/iSPD/SFnet/blob/main/images/speed_improved2.JPG">
@@ -135,6 +150,10 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
             "{\n" +
             ...
     ```
+    
+## Object Detection
+
+<img width="30%" src="https://github.com/iSPD/SFnet/blob/main/images/obj.gif"/>
 
 ## SFNet 기술 개발 개요
 
@@ -149,13 +168,13 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 - C, C++
 
 ### 사용 라이브러리
-
-- tensorflow android
+```
+- Tensorflow-Lite android
 
 - OpenCV 4.0.x android sdk
 
 - OpenGLES 2.0(Shader)
-
+```
 ### 기술 내용
 
 <img width="90%" src="https://github.com/iSPD/SFnet/blob/main/images/ObjectDetections.png"/>
