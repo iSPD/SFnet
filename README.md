@@ -208,9 +208,9 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
 - 물체의 경우 : Android preview callback buffer를 이용하여 Preview Data를 Object Detection Model에서 Inference(Minimum Confidence Rate : 0)하여 모든 객체 위치 검출.
 
-- 사람의 경우 : Android preview callback buffer를 이용하여 Preview Data를 Semantic Segmentation Model에서 Inference하여 사람 영역 검출.
+- 사람의 경우 : Android preview callback buffer를 이용하여 Preview Data를 Semantic Segmentation Model에서 Inference하여 사람 영역 검출하고 MediaPipe의 [Motion RecognitionMotion Recognition](https://github.com/iSPD/SFnet#motion-recognition)를 이용하여 사람 Skeleton 검출
 
-- Preview Data와 Object Detection 및 Semantic Segmentation에서 검출된 객체 위치 및 사람 영역을 이용하여 Jni(Java대비 속도 이슈 때문에 사용)에서 OpenCV를 이용하여 Target 객체  분석하여 정보 추출.
+- Preview Data와 Object Detection 및 Semantic Segmentation, Motion Recognition에서 검출된 객체 위치 및 사람 영역을 이용하여 Jni(Java대비 속도 이슈 때문에 사용)에서 OpenCV를 이용하여 Target 객체 분석하여 정보 추출.
 
 - [**S/C Depth Extraction(단안 카메라 심도 추출)**](https://github.com/iSPD/SFnet#sc-depth-extraction%EB%8B%A8%EC%95%88-%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%8B%AC%EB%8F%84-%EC%B6%94%EC%B6%9C) 기술에 의해 Depth를 추출하여 Depth Mask 생성
 
