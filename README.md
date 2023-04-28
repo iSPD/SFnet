@@ -160,7 +160,7 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
             ...
     ```
     
-## Object Detection
+## 객체 인식 방법 Using Object Detection
 
 <div align="center">
 <img width="30%" src="https://github.com/iSPD/SFnet/blob/main/images/obj.gif"/>    <img width="42%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthObje2.png"/>
