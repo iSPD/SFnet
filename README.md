@@ -21,17 +21,51 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
 <img width="35%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthObje.png"/>    <img width="58%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthPersons.jpg"/>
 
+- 개발환경
+    ```
+    - openCV 4.0.x
+    ```
+
+- SFNet에서는 양안 카메라 없이 아래와 같은 알고리즘을 이용하여 Depth Map 추출
+
+- 특허등록 기술 : **심도 예측을 이용한 단안카메라 用 아웃포커스 장치 및 방법** 2018.11.15 (10-2018-0140751)
+
+- OpenCV WaterShed사용(**C++**)
+
+- 카메라 실시간(Preview) 화면에 Outer 임의로 설정
+
+- Outer내 다수의 Marker를 배열
+
+- 다수의 Regional Segmentation 생성
+
+- Depth Map 생성
+
+- 가장 많이 겹친 부분을 피사체로 인식. 심도레벨 : 0(최대로 겹칩) ~ 9(겹치는 부분 없음). 총 10레벨 중 높을 수록 심도가 깊음.
+
+<img width="100%" src="https://github.com/iSPD/SFnet/blob/main/images/%EC%8B%AC%EB%8F%84%EC%98%88%EC%A0%9C.png"/> 
+
 ---
 
 ## Motion Recognition
 
 <img width="70%" src="https://github.com/iSPD/SFnet/blob/main/images/mediapipe.gif"/>
 
+- 개발환경
+    ```
+    - C++
+    ```
+
+- 구글에서 제공하는 AI Framework인 MediaPipe에서 Motion Recognition 사용
+
+- <b>SFNet<sup>TM</sup></b>에서는 사람 영역 검출을 위해 사용됨.
+
+- MediaPipe에서는 다양한 비전 AI기능을 파이프라인 형태로 손쉽게 사용할 수 있도록 프레임워크를 제공. 인체를 대상으로 하는 Detect(인식)에 대해서 얼굴인식, 포즈, 객체감지, 모션트레킹 등 다양한 형태의 기능과 모델을 제공함. python등 다양한 언어을 지원하며, <b>SFNet<sup>TM</sup></b>에서는 C++코드를 사용함.
+
 ---
       
 ### 인물인식 (Advanced Semantic-Segmentation)
 
-SFnet<sup>TM</sup> 은 semantic segmentation을 최적으로 수행하기 위해 DeepLab V3+ 모델에 Quantization, Output Resizing 을 적용한 후 아래 특허기술을 결합하여 고성능 semantic segmentation을 구현하였다.
+<b>SFnet<sup>TM</sup></b> 은 semantic segmentation을 최적으로 수행하기 위해 DeepLab V3+ 모델에 Quantization, Output Resizing 을 적용한 후 아래 특허기술을 결합하여 고성능 semantic segmentation을 구현하였다.
 
   * 개발환경
     ```
@@ -107,11 +141,7 @@ SFnet<sup>TM</sup> 은 semantic segmentation을 최적으로 수행하기 위해
 ### 사용모델
 - [ssd_mobilenet_v2_quantized_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md#:~:text=ssd_mobilenet_v2_quantized_coco)
 
-<br>  
-<div align="left">
-<img width="70%" src="https://github.com/iSPD/SFnet/blob/main/images/obj_detection.JPG"/>
-</div>
-</br>
+- [MobileNet-v3](https://github.com/tensorflow/models/blob/master/research/deeplab/g3doc/model_zoo.md)
 
 ### 개발 언어
 - Java
@@ -119,64 +149,25 @@ SFnet<sup>TM</sup> 은 semantic segmentation을 최적으로 수행하기 위해
 - C, C++
 
 ### 사용 라이브러리
+
+- tensorflow android
+
 - OpenCV 4.0.x android sdk
 
 - OpenGLES 2.0(Shader)
 
 ### 기술 내용
-- Android preview callback buffer를 이용하여 Preview Data를 Object Detection Model에서 Inference(Minimum Confidence Rate : 0)하여 모든 객체 위치 검출.
 
-- Preview Data와 Object Detection에서 검출된 객체 위치를 이용하여 Jni(Java대비 속도 이슈 때문에 사용)에서 OpenCV를 이용하여 Target 객체 분석하여 정보 추출.
+<img width="90%" src="https://github.com/iSPD/SFnet/blob/main/images/ObjectDetections.png"/>
 
-- Preview와 Object Detection Box위치를 이용하여 **WaterShed**를 통해 영역 검출
+- 물체의 경우 : Android preview callback buffer를 이용하여 Preview Data를 Object Detection Model에서 Inference(Minimum Confidence Rate : 0)하여 모든 객체 위치 검출.
 
-- 아래 **특허 2** 기술에 의해 최종 피사체 선택
+- 사람의 경우 : Android preview callback buffer를 이용하여 Preview Data를 Semantic Segmentation Model에서 Inference하여 사람 영역 검출.
 
-- 아래 **특허 1** 기술에 의해 Depth를 추출하여 Depth Mask 생성
+- Preview Data와 Object Detection 및 Semantic Segmentation에서 검출된 객체 위치 및 사람 영역을 이용하여 Jni(Java대비 속도 이슈 때문에 사용)에서 OpenCV를 이용하여 Target 객체  분석하여 정보 추출.
 
-- Android Camera Preview를 OpenCV에서 분석된 정보로 이용하여, OpenGLES 2.0의 SurfaceTexture를 통해 Shader에 각종 Filter를 적용 후 화면에 그려줌.
+- **S/C Depth Extraction(단안 카메라 심도 추출)** 기술에 의해 Depth를 추출하여 Depth Mask 생성
 
-- Shader에 Depth Mask를 이용하여 아래 필터 및 효과 적용
+- Android Camera Preview를 OpenCV에서 분석된 Depth 정보로 이용하여, OpenGLES 2.0의 SurfaceTexture를 통해 Shader에 각종 Filter를 적용 후 화면에 그려줌.
 
-  - **`Cartoon효과`** : 사람만 Cartoon, 배경만 Cartoon
-
-  - **`SF효과`** : 객체 및 사람의 배경을 다른 사진으로 변경
-
-  - **`OutFocus효과`** : 객체 및 사람의 배경 Blur
-
-  - **`HighLight효과`** : 객체 및 사람의 배경 어둡게. 아이폰 카메라에 있는 무대조명 효과
-
-  - **`Edge필터`** : Cartoon효과에 사용
-
-  - **`LerpBlur필터`** : 모든 효과에 Feather를 주어서 자연스럽게 함
-
-  - **`Beauty필터`** : 사람 얼굴 아름답게 보정
-
-- 소스 예제(Beauty필터)
-```
-public static final String SOURCE_DRAW_FS_BEAUTIFY_FILTER = "" +
-        "#extension GL_OES_EGL_image_external : require\n" +
-        "precision mediump float;\n" +
-        "uniform samplerExternalOES sTexture;\n" +
-        //"uniform sampler2D sTexture;\n" +
-        "uniform sampler2D sMaskTexture;\n" +
-        "uniform sampler2D sGammaTexture;\n" +
-        "uniform vec2 imageStep;\n" +
-        "uniform float intensity;\n" +
-        "uniform int uUseCartoon;\n" +
-        "varying vec2 vTexCoord;\n" +
-
-        "vec4 black_edge_effect(vec2 coord, vec4 color) {\n" +
-        "      vec4 effect;\n" +
-        "      float bk_rate = 1.0;\n" +
-
-        "      effect.r = texture2D(sGammaTexture, vec2(color.r, 0.0)).r * bk_rate;\n" +
-        "      effect.g = texture2D(sGammaTexture, vec2(color.g, 0.0)).g * bk_rate;\n" +
-        "      effect.b = texture2D(sGammaTexture, vec2(color.b, 0.0)).b * bk_rate;\n" +
-        "      effect.a = color.a;\n" +
-        "      return effect;\n" +
-        "}\n" +
-
-        "void main()\n" +
-        "{\n" +
-```
+- Shader에 Depth Mask를 이용하여 Filter **Effect Using OpenGL ES2.0 Shader**에 기술 된 필터 및 효과 적용
