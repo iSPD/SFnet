@@ -56,19 +56,19 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
     - Shader에 Depth Mask를 이용하여 아래 필터 및 효과 적용
 
-      - Cartoon효과 : 사람만 Cartoon, 배경만 Cartoon
+      - **`Cartoon효과`** : 사람만 Cartoon, 배경만 Cartoon
       
-      - SF효과 : 객체 및 사람의 배경을 다른 사진으로 변경
+      - **`SF효과`** : 객체 및 사람의 배경을 다른 사진으로 변경
 
-      - OutFocus효과 : 객체 및 사람의 배경 Blur
+      - **`OutFocus효과`** : 객체 및 사람의 배경 Blur
       
-      - HighLight효과 : 객체 및 사람의 배경 어둡게. 아이폰 카메라에 있는 무대조명 효과
+      - **`HighLight효과`** : 객체 및 사람의 배경 어둡게. 아이폰 카메라에 있는 무대조명 효과
       
-      - Edge필터 : Cartoon효과에 사용
+      - **`Edge필터`** : Cartoon효과에 사용
 
-      - LerpBlur필터 : 모든 효과에 Feather를 주어서 자연스럽게 함
+      - **`LerpBlur필터`** : 모든 효과에 Feather를 주어서 자연스럽게 함
      
-      - Beauty필터 : 사람 얼굴 아름답게 보정
+      - **`Beauty필터`** : 사람 얼굴 아름답게 보정
 
     - 소스 예제(Beauty필터)
     ```
