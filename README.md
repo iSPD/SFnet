@@ -36,7 +36,7 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 <img width="28%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthObje.png"/>    <img width="46%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthPersons.jpg"/>
 </div>
 
-- SFNet에서는 양안 카메라 없이 아래와 같은 알고리즘을 이용하여 Depth Map 추출
+- <b>SFNet<sup>TM</sup></b>에서는 양안 카메라 없이 아래와 같은 알고리즘을 이용하여 Depth Map 추출
 
 - 특허등록 기술 : **심도 예측을 이용한 단안카메라 用 아웃포커스 장치 및 방법** 2018.11.15 (10-2018-0140751)
 
@@ -74,7 +74,7 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
       
 ### 인물 영역 인식 (with Advanced Semantic-Segmentation)
 
-SFnet<sup>TM</sup> 은 semantic segmentation을 최적으로 수행하기 위해 DeepLab V3+ 모델에 Quantization, Output Resizing 을 적용한 후 아래 특허기술을 결합하여 고성능 semantic segmentation을 구현하였다.
+<b>SFNet<sup>TM</sup></b> 은 semantic segmentation을 최적으로 수행하기 위해 DeepLab V3+ 모델에 Quantization, Output Resizing 을 적용한 후 아래 특허기술을 결합하여 고성능 semantic segmentation을 구현하였다.
 
   #### 개발환경
 
@@ -166,7 +166,7 @@ SFnet<sup>TM</sup> 은 semantic segmentation을 최적으로 수행하기 위해
 <img width="30%" src="https://github.com/iSPD/SFnet/blob/main/images/obj.gif"/>    <img width="42%" src="https://github.com/iSPD/SFnet/blob/main/images/DepthObje2.png"/>
 </div>
 
-- SFNet에서는 아래와 같은 알고리즘을 이용하여 피사체 자동추적
+- <b>SFNet<sup>TM</sup></b>에서는 아래와 같은 알고리즘을 이용하여 피사체 자동추적
 
 - 특허등록 기술 : **Object Detection의 피사체 자동추적 인식을 통한 심도효과 및 배경처리 방법** 2018.11.15 (10-2018-0140752)
 
