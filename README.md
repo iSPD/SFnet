@@ -222,6 +222,9 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 ## LICENSE
 - [MIT](https://github.com/iSPD/SFnet/blob/main/LICENSE.md)
 
+## 사용 방법
+- Contact : ispd_daniel@outlook.kr(김경훈), ispd_sally@outlook.kr(정영선)  
+
 ---
 ## 문의 사항
 - (주)iSPD 정한별 대표
