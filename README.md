@@ -17,7 +17,7 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 ## SFCam on Mobile with SFNet<sup>TM</sup>
 
 <div align="center">
-<img width="30%" src="https://github.com/iSPD/SFnet/blob/main/images/backCamera.gif"/>    <img width="30%" src="https://github.com/iSPD/SFnet/blob/main/images/frontCamera27.gif"/>
+<img width="30%" src="https://github.com/iSPD/SFnet/blob/main/images/backCamera.gif"/>    <img width="30%" src="https://github.com/iSPD/SFnet/blob/main/images/frontCam27.gif"/>
 </div>
 
 ---
