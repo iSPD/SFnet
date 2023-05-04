@@ -94,7 +94,7 @@ class mPreviewCameraListener implements Camera.PreviewCallback {
 
 ```
 
-- - [module.cpp](https://github.com/iSPD/SFnet/blob/main/cpp/module.cpp)
+- [module.cpp](https://github.com/iSPD/SFnet/blob/main/cpp/module.cpp)
 ```C++
 int process(Mat &img_input, Mat &img_result, Mat &img_studio_result) {
 
