@@ -185,6 +185,7 @@ int process(Mat &img_input, Mat &img_result, Mat &img_studio_result) {
   - `HightLight Effect` : 인물/사물의 배경을 어둡게 표현. 아이폰의 카메라 기능 중 무대조명 효과.  
   
   - Code Example (Beauty Filter)
+    - [CreateBeautifyFilter.java](https://github.com/iSPD/SFnet/blob/main/java/com/ispd/sfcam/pdEngine/CreateBeautifyFilter.java)
     ``` JAVA
     public static final String SOURCE_DRAW_FS_BEAUTIFY_FILTER = "" +
             "#extension GL_OES_EGL_image_external : require\n" +
