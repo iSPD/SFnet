@@ -56,6 +56,59 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 <img width="100%" src="https://github.com/iSPD/SFnet/blob/main/images/%EC%8B%AC%EB%8F%84%EC%98%88%EC%A0%9C.png"/> 
 </div>
 
+### 사용언어 및 라이브러리
+
+- C++
+
+- OpenCV 4.0.x
+
+### 예제코드
+- Java
+```Java
+class mPreviewCameraListener implements Camera.PreviewCallback {
+
+    @Override
+    public void onPreviewFrame(final byte[] frame, Camera arg1) {
+
+      ...
+
+      if (mObjDetector != null) {
+        //if (mFaceDetected == false && aiCamParameters.mCameraLocationInt == 0) {
+        if (mObjUsed == true && aiCamParameters.mCameraLocationInt == 0) {
+          mObjDetector.setPreviewData(frame);
+          doObjectJob(frame);
+          SegmentorMain.resetLastSegment();
+        }
+      }
+
+      Log.d(TAG, "[save-check] mObjUsed : "+mObjUsed+", mFlagStartCapture : "+mFlagStartCapture);
+
+      if( mObjUsed == false ) {
+        if ( mFlagStartCapture == false ) {
+//          SegmentorMain.setPreviewData(frame, 4, 3);
+          if (mSegmentDetectorLow != null) {
+            mSegmentDetectorLow.setPreviewData(frame);
+          }
+
+      ...
+
+```
+
+- C++(Jni)
+```C++
+int process(Mat &img_input, Mat &img_result, Mat &img_studio_result) {
+
+      ...
+
+      if (gObjMoreNumber > 0 && touchOn == false) {
+              Mat temp = Mat::zeros(backAlgMat.rows, backAlgMat.cols, backAlgMat.type());
+
+              getObjnTouchMask(image, backAlgMat, touchOn, gTouchX, gTouchY, touchMat, analisysMat,
+                               0, gMultiTouchOn, gMinusTouchOn);
+      ...                               
+
+```
+
 ---
 
 ## Motion Recognition
