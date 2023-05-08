@@ -182,7 +182,7 @@ int process(Mat &img_input, Mat &img_result, Mat &img_studio_result) {
   
   - `OutFocus Effect` : 인물/사물의 배경을 흐릿하게 표현
   
-  - `HightLight Effect` : 인물/사물의 배경을 어둡게 표현. 아이폰의 카메라 기능 중 무대조명 효과.  
+  - `Highight Effect` : 인물/사물의 배경을 어둡게 표현. 아이폰의 카메라 기능 중 무대조명 효과.  
   
   - Code Example (Beauty Filter)
     - [CreateBeautifyFilter.java](https://github.com/iSPD/SFnet/blob/main/java/com/ispd/sfcam/pdEngine/CreateBeautifyFilter.java)
