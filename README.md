@@ -241,7 +241,7 @@ int process(Mat &img_input, Mat &img_result, Mat &img_studio_result) {
 ### 사용모델
 - [ssd_mobilenet_v2_quantized_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md#:~:text=ssd_mobilenet_v2_quantized_coco)
 
-- [MobileNet-v3](https://github.com/tensorflow/models/blob/master/research/deeplab/g3doc/model_zoo.md)
+- [deeplab MobileNet-v2](https://github.com/tensorflow/models/blob/master/research/deeplab/g3doc/model_zoo.md)
 
 ### 개발 언어
 - Java
