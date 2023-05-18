@@ -127,7 +127,13 @@ int process(Mat &img_input, Mat &img_result, Mat &img_studio_result) {
 
 - <b>SFNet<sup>TM</sup></b>에서는 사람 영역 검출을 위해 사용되며, Semantic Segmentation만으로는 손이나 팔 등을 인식하는데 한계가 있어 사용됨.
 
-- MediaPipe에서는 다양한 비전 AI기능을 파이프라인 형태로 손쉽게 사용할 수 있도록 프레임워크를 제공. 인체를 대상으로 하는 Detect(인식)에 대해서 얼굴인식, 포즈, 객체감지, 모션트레킹 등 다양한 형태의 기능과 모델을 제공함. python등 다양한 언어을 지원하며, <b>SFNet<sup>TM</sup></b>에서는 C++코드를 사용하며, <b>OpenGL ES2.0(Shader)</b>과 연결해서 사용
+- MediaPipe에서는 다양한 비전 AI기능을 파이프라인 형태로 손쉽게 사용할 수 있도록 프레임워크를 제공. 인체를 대상으로 하는 Detect(인식)에 대해서 얼굴인식, 포즈, 객체감지, 모션트레킹 등 다양한 형태의 기능과 모델을 제공함. python등 다양한 언어을 지원하며, <b>SFNet<sup>TM</sup></b>에서는 Java 코드 수정 후 AAR(Android Archive package)로 Build하여 Android App에 포팅하여 사용
+
+    - Fragment Shader code of MediaPipe의 Texture Transfer API 구현
+    
+    - Fragment Shader code of MediaPipe의 FPS Control API 구현
+
+    - Minimum Threshold Value of MediaPipe Pose Landmark Detection 최적화
 
 ---
       
