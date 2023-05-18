@@ -69,7 +69,7 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 - OpenCV 4.0.x
 
 ### 예제코드
-- [cameraFragment.java](https://github.com/iSPD/SFnet/blob/main/java/com/ispd/sfcam/cameraFragment.java)
+- [cameraFragment.java( Android App )](https://github.com/iSPD/SFnet/blob/main/java/com/ispd/sfcam/cameraFragment.java)
 ```Java
 class mPreviewCameraListener implements Camera.PreviewCallback {
 
@@ -100,7 +100,7 @@ class mPreviewCameraListener implements Camera.PreviewCallback {
 
 ```
 
-- [module.cpp](https://github.com/iSPD/SFnet/blob/main/cpp/module.cpp)
+- [module.cpp ( Android JNI )](https://github.com/iSPD/SFnet/blob/main/cpp/module.cpp)
 ```C++
 int process(Mat &img_input, Mat &img_result, Mat &img_studio_result) {
 
