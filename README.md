@@ -281,7 +281,7 @@ int process(Mat &img_input, Mat &img_result, Mat &img_studio_result) {
 
 <img width="90%" src="https://github.com/iSPD/SFnet/blob/main/images/ObjectDetections.png"/>
 
-- 물체의 경우 : Android preview callback buffer를 이용하여 Preview Data를 Object Detection Model에서 Inference(Minimum Confidence Rate : 0)하여 모든 객체 위치 검출.
+- 물체의 경우 : Android preview callback buffer를 이용하여 Preview Data를 Object Detection Model에서 Inference(Minimum Confidence Rate : 0)하여 모든 객체 위치 검출하고 Semantic Segmentation Model에서 Inference하여 물체 영역 검출
 
 - 사람의 경우 : Android preview callback buffer를 이용하여 Preview Data를 Semantic Segmentation Model에서 Inference하여 사람 영역 검출하고 MediaPipe의 [Motion RecognitionMotion Recognition](https://github.com/iSPD/SFnet#motion-recognition)를 이용하여 사람 Skeleton 검출
 
