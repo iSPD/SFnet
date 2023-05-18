@@ -139,7 +139,15 @@ int process(Mat &img_input, Mat &img_result, Mat &img_studio_result) {
       
 ## Advanced Semantic-Segmentation
 
-<b>SFNet<sup>TM</sup></b> 은 semantic segmentation을 최적으로 수행하기 위해 DeepLab V3+ 모델에 Quantization, Output Resizing 을 적용한 후 아래 특허기술을 결합하여 고성능 semantic segmentation을 구현하였다.
+<b>SFNet<sup>TM</sup></b> 은 Semantic Segmentation을 최적으로 수행하기 위해 DeepLab모델에 Quantization, Output Resizing 을 적용한 후 아래 특허기술을 결합하여 고성능 Semantic Segmentation을 구현하였다.
+
+  #### 모델 및 데이터셋
+ 
+  - 모델 : [Tensorflow Deeplab의 MobileNet](https://github.com/tensorflow/models/tree/master/research/deeplab)
+
+  - PreTrained : ImageNet, MS-COCO, VOC 2012 train_aug set
+  
+  - 데이터 자체 수집 및 가공
 
   #### 개발환경
 
