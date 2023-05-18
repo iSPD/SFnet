@@ -213,6 +213,7 @@ int process(Mat &img_input, Mat &img_result, Mat &img_studio_result) {
             "{\n" +
             ...
     ```
+---
     
 ## 객체 인식 방법 Using Object Detection
 
