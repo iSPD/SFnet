@@ -125,7 +125,7 @@ int process(Mat &img_input, Mat &img_result, Mat &img_studio_result) {
 
 ---
       
-### 인물 영역 인식 (with Advanced Semantic-Segmentation)
+### Advanced Semantic-Segmentation
 
 <b>SFNet<sup>TM</sup></b> 은 semantic segmentation을 최적으로 수행하기 위해 DeepLab V3+ 모델에 Quantization, Output Resizing 을 적용한 후 아래 특허기술을 결합하여 고성능 semantic segmentation을 구현하였다.
 
