@@ -40,7 +40,7 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
 - 특허등록 기술 : **심도 예측을 이용한 단안카메라 用 아웃포커스 장치 및 방법** 2018.11.15 (10-2018-0140751)
 
-- OpenCV WaterShed사용(**C++**)
+<!-- - OpenCV WaterShed사용(**C++**)
 
 - 카메라 실시간(Preview) 화면에 Outer 임의로 설정
 
@@ -48,9 +48,15 @@ S.F 영화 수준의 C.G 효과를 스마트폰에서 실시간 구현하기 위
 
 - 다수의 Regional Segmentation 생성
 
-- Depth Map 생성
+- Depth Map 생성 
 
-- 가장 많이 겹친 부분을 피사체로 인식. 심도레벨 : 0(최대로 겹칩) ~ 9(겹치는 부분 없음). 총 10레벨 중 높을 수록 심도가 깊음.
+- 가장 많이 겹친 부분을 피사체로 인식. 심도레벨 : 0(최대로 겹칩) ~ 9(겹치는 부분 없음). 총 10레벨 중 높을 수록 심도가 깊음. -->
+
+- N분할 영상에 OpenCV로 Segmentation(**C++**) 수행 후 Detection된 영역을 Sum하여 Depth Map 생성
+
+- Depth Map Level 9 단계 구현 (단계별 Gradation 효과 구현)
+
+- Depth Map과 Camera 영상을 Camera Fragment Shade에 Texture로 전달하여 Depth Level에 따라 Camera 영상에 Feather Effect 적용
 
 <div align="center">
 <img width="100%" src="https://github.com/iSPD/SFnet/blob/main/images/%EC%8B%AC%EB%8F%84%EC%98%88%EC%A0%9C.png"/> 
